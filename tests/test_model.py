@@ -15,7 +15,7 @@ def rf_model():
 
 @pytest.fixture
 def full_data():
-    df_path = "../data/census.csv"
+    df_path = "./data/census.csv"
     df = pd.read_csv(df_path)
     return df
 
@@ -29,7 +29,7 @@ def test_data():
 
 @pytest.fixture
 def encoder():
-    encoder = joblib.load('../../model/encoder.pkl')
+    encoder = joblib.load('../model/encoder.pkl')
     return encoder
 
 
