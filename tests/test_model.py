@@ -9,13 +9,13 @@ from ml import process_data as process_data
 
 @pytest.fixture
 def rf_model():
-    rf_model = joblib.load('../model/rfc_model.pkl')
+    rf_model = joblib.load('./model/rfc_model.pkl')
     return rf_model
 
 
 @pytest.fixture
 def full_data():
-    df_path = "../data/census.csv"
+    df_path = "./data/census.csv"
     df = pd.read_csv(df_path)
     return df
 
@@ -29,7 +29,7 @@ def test_data():
 
 @pytest.fixture
 def encoder():
-    encoder = joblib.load('../model/encoder.pkl')
+    encoder = joblib.load('./model/encoder.pkl')
     return encoder
 
 

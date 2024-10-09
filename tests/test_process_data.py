@@ -6,7 +6,7 @@ from ml import process_data
 
 @pytest.fixture
 def processed_data():
-    df_path = "../data/census.csv"
+    df_path = "./data/census.csv"
     df = pd.read_csv(df_path)
     X, y, encoder, lb = process_data.process_data(df,
                                                   categorical_features=[
@@ -25,7 +25,7 @@ def processed_data():
 
 @pytest.fixture
 def census_data():
-    df_path = "../data/census.csv"
+    df_path = "./data/census.csv"
     df = pd.read_csv(df_path)
     yield df
 
