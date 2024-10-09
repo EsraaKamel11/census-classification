@@ -1,1 +1,7 @@
-/data
+# Ignore all CSV files in the data directory
+data/*.csv
+
+# But do not ignore DVC files
+!data/*.dvc
+
+
