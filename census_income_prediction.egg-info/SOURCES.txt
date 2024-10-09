@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.py
+census_income_prediction.egg-info/PKG-INFO
+census_income_prediction.egg-info/SOURCES.txt
+census_income_prediction.egg-info/dependency_links.txt
+census_income_prediction.egg-info/requires.txt
+census_income_prediction.egg-info/top_level.txt
+ml/__init__.py
+ml/data.py
+ml/inference.py
+ml/model.py
+ml/process_data.py
+tests/test_local_api.py
+tests/test_model.py
+tests/test_process_data.py
