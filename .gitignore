@@ -2,6 +2,6 @@
 #data/*.csv
 
 # But do not ignore DVC files
-!data/*.dvc
+#!data/*.dvc
 
 
