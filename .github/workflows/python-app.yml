@@ -42,7 +42,6 @@ jobs:
     - name: Check installed packages
       run: pip list
 
-    - run: uvicorn main:app --host=0.0.0.0 --port=5000
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
