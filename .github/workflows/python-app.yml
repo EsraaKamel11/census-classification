@@ -28,7 +28,8 @@ jobs:
     - name: Pull data
       run: |
         dvc remote add -d -f s3remote s3://census-fastapi
-        dvc pull
+        dvc pull  --force
+
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
