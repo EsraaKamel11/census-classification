@@ -45,7 +45,7 @@ def inference(df, model=None, encoder=None, output="binary", label=None):
     if output == "binary":
         return pred_y
     if output == "string":
-        lb = joblib.load('../model/lb.pkl')  # Load LabelBinarizer
+        lb = joblib.load('./model/lb.pkl')  # Load LabelBinarizer
         return str(lb.inverse_transform(pred_y)[0])
 
 
