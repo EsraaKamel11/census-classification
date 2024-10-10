@@ -39,6 +39,6 @@ def train_rf_model(X_train, y_train, seed=42,
     cv_rfc.fit(X_train, y_train)
 
     if save_model is True:
-        joblib.dump(cv_rfc.best_estimator_, '../model/rfc_model.pkl')
+        joblib.dump(cv_rfc.best_estimator_, './model/rfc_model.pkl')
 
     return cv_rfc.best_estimator_
