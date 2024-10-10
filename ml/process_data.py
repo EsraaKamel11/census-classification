@@ -118,7 +118,7 @@ def process_data(
         X_categorical = encoder.fit_transform(X_categorical)
         y = lb.fit_transform(y.values).ravel()
 
-        model_dir = '../model'
+        model_dir = './model'
         if not os.path.exists(model_dir):
             os.makedirs(model_dir)
 

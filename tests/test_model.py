@@ -22,7 +22,7 @@ def full_data():
 
 @pytest.fixture
 def test_data():
-    df_path = "../data/census.csv"
+    df_path = "./data/census.csv"
     df = pd.read_csv(df_path)
     return df.sample(20, random_state=42)
 

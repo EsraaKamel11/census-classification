@@ -21,14 +21,14 @@ def inference(df, model=None, encoder=None, output="binary", label=None):
         Predictions from the model.
     """
 
-    lb = joblib.load('../model/lb.pkl')
+    lb = joblib.load('./model/lb.pkl')
 
     if encoder is None:
-        encoder = joblib.load('../model/encoder.pkl')  # Load OneHotEncoder
+        encoder = joblib.load('./model/encoder.pkl')  # Load OneHotEncoder
 
     if model is None:
         # Load RandomForestClassifier
-        model = joblib.load('../model/rfc_model.pkl')
+        model = joblib.load('./model/rfc_model.pkl')
     if label is not None:
         label = "salary"
 
@@ -45,7 +45,7 @@ def inference(df, model=None, encoder=None, output="binary", label=None):
     if output == "binary":
         return pred_y
     if output == "string":
-        lb = joblib.load('../model/lb.pkl')  # Load LabelBinarizer
+        lb = joblib.load('./model/lb.pkl')  # Load LabelBinarizer
         return str(lb.inverse_transform(pred_y)[0])
 
 
@@ -99,10 +99,10 @@ def create_slice_metrics_df(cat_feature, df, model=None, lb=None, label=None):
     df.columns = df.columns.str.replace(' ', '')
 
     if model is None:
-        model = joblib.load('../model/rfc_model.pkl')
+        model = joblib.load('./model/rfc_model.pkl')
 
     if lb is None:
-        lb = joblib.load('../model/lb.pkl')
+        lb = joblib.load('./model/lb.pkl')
 
     # Generate pandas df with slice performance
     slice_metrics = pd.DataFrame(
