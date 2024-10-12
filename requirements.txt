@@ -8,6 +8,7 @@ pydantic==2.9.2
 pytest==8.3.3
 pytest-cov
 dvc
+dvc-s3
 httpx
 requests==2.32.3
 gunicorn>=21.2.0
