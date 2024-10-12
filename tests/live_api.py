@@ -22,7 +22,7 @@ test_df = pd.DataFrame(test_dict)
 test_json = test_df.head(1).to_dict(orient="records")[0]
 
 response = requests.post(
-    'ek-app8-560cd13d1dc9.herokuapp.com/prediction',
+    'https://ek-app-93831a481cd4.herokuapp.com/prediction',
     json=test_json,
     headers={'Content-Type': 'application/json'}
 )
